@@ -8,6 +8,7 @@ target 'InnoTechExam' do
   # Pods for InnoTechExam
   
 	pod 'Alamofire', '~> 5.2'
-  pod 'Kingfisher', '~> 5.0'
+        pod 'Kingfisher', '~> 5.0'
+        pod 'SnapKit', '~> 5.0.0'
 
 end
