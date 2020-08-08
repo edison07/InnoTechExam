@@ -10,7 +10,6 @@
 		38CDE6A424DD9C6A00FE6D28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CDE6A324DD9C6A00FE6D28 /* AppDelegate.swift */; };
 		38CDE6A624DD9C6A00FE6D28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CDE6A524DD9C6A00FE6D28 /* SceneDelegate.swift */; };
 		38CDE6A824DD9C6A00FE6D28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CDE6A724DD9C6A00FE6D28 /* ViewController.swift */; };
-		38CDE6AB24DD9C6A00FE6D28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38CDE6A924DD9C6A00FE6D28 /* Main.storyboard */; };
 		38CDE6AD24DD9C6F00FE6D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38CDE6AC24DD9C6F00FE6D28 /* Assets.xcassets */; };
 		38CDE6B824DD9D9C00FE6D28 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CDE6B724DD9D9C00FE6D28 /* APIManager.swift */; };
 		38CDE6BC24DD9FCB00FE6D28 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CDE6BB24DD9FCB00FE6D28 /* ViewModel.swift */; };
@@ -26,7 +25,6 @@
 		38CDE6A324DD9C6A00FE6D28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38CDE6A524DD9C6A00FE6D28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		38CDE6A724DD9C6A00FE6D28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		38CDE6AA24DD9C6A00FE6D28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38CDE6AC24DD9C6F00FE6D28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38CDE6B124DD9C6F00FE6D28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38CDE6B724DD9D9C00FE6D28 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -50,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3837017D24DF3E650041B30B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				38CDE6B724DD9D9C00FE6D28 /* APIManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		38CDE69724DD9C6A00FE6D28 = {
 			isa = PBXGroup;
 			children = (
@@ -73,11 +79,11 @@
 			children = (
 				38CDE6A324DD9C6A00FE6D28 /* AppDelegate.swift */,
 				38CDE6A524DD9C6A00FE6D28 /* SceneDelegate.swift */,
-				38CDE6B724DD9D9C00FE6D28 /* APIManager.swift */,
 				38CDE6C124DDA2AC00FE6D28 /* Extension */,
 				38CDE6C424DDA2B400FE6D28 /* Model */,
 				38CDE6C224DDA2AE00FE6D28 /* View */,
 				38CDE6C324DDA2B000FE6D28 /* ViewModel */,
+				3837017D24DF3E650041B30B /* Manager */,
 				38CDE6AC24DD9C6F00FE6D28 /* Assets.xcassets */,
 				38CDE6B124DD9C6F00FE6D28 /* Info.plist */,
 			);
@@ -95,7 +101,6 @@
 		38CDE6C224DDA2AE00FE6D28 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				38CDE6A924DD9C6A00FE6D28 /* Main.storyboard */,
 				38CDE6A724DD9C6A00FE6D28 /* ViewController.swift */,
 				38CDE6BD24DDA1F100FE6D28 /* CustomTableViewCell.swift */,
 			);
@@ -199,7 +204,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				38CDE6AD24DD9C6F00FE6D28 /* Assets.xcassets in Resources */,
-				38CDE6AB24DD9C6A00FE6D28 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,17 +268,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		38CDE6A924DD9C6A00FE6D28 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				38CDE6AA24DD9C6A00FE6D28 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		38CDE6B224DD9C6F00FE6D28 /* Debug */ = {

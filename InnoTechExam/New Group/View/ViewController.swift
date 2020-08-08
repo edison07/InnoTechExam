@@ -8,20 +8,40 @@
 
 import UIKit
 import Kingfisher
+import SnapKit
 
 class ViewController: UIViewController {
     
     
-    @IBOutlet weak var tableView: UITableView!
     var searchController: UISearchController!
-    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(cellWithClass: CustomTableViewCell.self)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.backgroundColor = .clear
+        return tableView
+    }()
     let viewModel = ViewModel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+        setupTableView()
+        setupSearchController()
         viewModel.delegate = self
         viewModel.getData()
-        setupSearchController()
+    }
+    
+    private func setupTableView() {
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading)
+            make.right.equalTo(view.safeAreaLayoutGuide.snp.right)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+        }
     }
     
     private func setupSearchController() {
@@ -54,6 +74,7 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didSelectRow(at: indexPath.row)
     }
+    
 }
 
 extension ViewController: ViewModelDelegate {
