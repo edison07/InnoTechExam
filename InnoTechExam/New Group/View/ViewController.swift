@@ -12,17 +12,15 @@ import SnapKit
 
 class ViewController: UIViewController {
     
-    
+    let viewModel = ViewModel()
     var searchController: UISearchController!
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(cellWithClass: CustomTableViewCell.self)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.backgroundColor = .clear
         return tableView
     }()
-    let viewModel = ViewModel()
     
     
     override func viewDidLoad() {
@@ -51,7 +49,7 @@ class ViewController: UIViewController {
         self.searchController.searchResultsUpdater = self
         self.searchController.searchBar.delegate = self
         self.searchController.delegate = self
-        self.tableView.tableHeaderView = self.searchController.searchBar
+        self.navigationItem.searchController = searchController
     }
 }
 
@@ -74,7 +72,6 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didSelectRow(at: indexPath.row)
     }
-    
 }
 
 extension ViewController: ViewModelDelegate {
