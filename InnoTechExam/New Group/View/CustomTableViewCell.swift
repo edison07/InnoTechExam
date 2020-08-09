@@ -27,6 +27,7 @@ class CustomTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupThumbnailImageView()
         setupContentLabel()
+        selectionStyle = .none
     }
     
     private func setupThumbnailImageView() {
