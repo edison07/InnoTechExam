@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window!.backgroundColor = UIColor.white
 
         // 設置根視圖控制器
-        self.window!.rootViewController = ViewController()
+        self.window!.rootViewController =  UINavigationController(rootViewController: ViewController())
 
         // 將 UIWindow 設置為可見的
         self.window!.makeKeyAndVisible()
